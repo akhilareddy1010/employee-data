@@ -18,12 +18,13 @@ if choice=="INSERT":
         cursor.execute("INSERT INTO employee(id,name,sal) VALUES(?,?,?)""",(eid,name,sal))
         conn.commit()
         st.success("EMPLOYEES ADDED SUCESSFULLY")
-elif choice="VIEW":
+elif choice=="VIEW":
     st.subheader("view employee details")
     df = pd.read_sql("SELECT * FROM employee",conn)
     st.dataframe(df)
 
     
     
+
 
 
